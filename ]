@@ -1,0 +1,55 @@
+//============================================================================
+// Name        : TheGoogles.cpp
+// Author      : Andrea
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Ansi-style
+//============================================================================
+
+// API for database app
+//
+// This program tests the Composer class.
+//#include "composer.h"
+//#include "database.h"
+#include "API.h"
+
+API::API(){};
+API::~API(){};
+
+void API::CommandList() {
+
+ cout << "Composer Database" << endl;
+ cout << "---------------------------------------------" << endl;
+ cout << "1) Add a new composer" << endl;
+ cout << "2) Retrieve a composer's data" << endl;
+ cout << "3) Promote/demote a composer's rank" << endl;
+ cout << "4) List all composers" << endl;
+ cout << "5) List all composers by rank" << endl;
+ cout << "0) Quit" << endl;
+
+}
+
+void API::AskComposerDetails() {
+
+  string in_first_name, in_last_name, in_genre, in_fact;
+  int in_yob;
+
+  cout << "First name of the composer:" << endl;
+  cin >> in_first_name ; 
+   
+  cout << endl << "Last name of the composer:" << endl;
+  cin >> in_last_name;
+
+  cout << endl << "Music style of the composer:" << endl;
+  cin >> in_genre;
+  
+  cout << endl << "Year of birth of the composer:" << endl;
+  cin >> in_yob;
+
+  cout << endl << "An interesting fact related to the composer:" << endl;
+  cin >> in_fact;
+  cout << endl;
+  
+  database.AddComposer(in_first_name, in_last_name, in_genre, in_yob)
+
+}
