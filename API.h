@@ -4,7 +4,6 @@
 // Notice we use const in C++ instead of #define.
 #include <iostream>
 #include <string>
-//#include "composer.h"
 #include "database.h"
 using namespace std;
 
